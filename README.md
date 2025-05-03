@@ -27,9 +27,14 @@ This is a project done in my Computer Networks class. The goal is to reduce ener
 - MQTT broker (e.g., Mosquitto)
 - Required Python libraries:
   - `paho-mqtt`
-  - `time`
+  - `time`, `datetime`,
+  - `json`
+  - `smbus2`
  
 Install dependencies:
 
 ```bash
 pip install paho-mqtt
+sudo apt-get install nodejs
+npm install -g pnpm
+pip install smbus2
