@@ -1,7 +1,6 @@
-# Smart Bulb Energy Saver with Raspberry Pi and Python
+# Smart Bulb Energy Efficiency with Raspberry Pi and Python
 
-This project reduces energy waste by automating a smart bulb using a Raspberry Pi and Python. By combining motion detection, presence sensing, and ambient light measurement, 
-the system intelligently controls lighting based on real-time room conditions.
+This is a project done in my Computer Networks class. The goal is to reduce energy waste by automating a smart bulb using a Raspberry Pi and Python. By combining motion detection, presence sensing, and ambient light measurement, the system intelligently controls lighting based on real-time room conditions.
 
 ## Features
 
