@@ -27,7 +27,8 @@ while True:
 
     # debug
     print(f"Motion: {motion} | Distance: {distance_cm} cm | Bulb: {light_on}")
-   
+    print("")
+
     # --- suppress distance after exit ---
     if not light_on and (now - exit_time < EXIT_COOLDOWN):
         print("Suppressing mmWave after exit")
@@ -54,8 +55,12 @@ while True:
         startup_checked = True
         continue
 
-    # --- EXIT: distance < 100 cm then motion within 2 seconds ---
-    if light_on and (0 < last_distance_time - last_motion_time < WINDOW_EXIT) and last_distance < DISTANCE_THRESHOLD:
+    # --- EXIT: distance < 100 cm then motion within 3 seconds ---
+    if (
+        light_on and 
+        (0 < last_distance_time - last_motion_time < WINDOW_EXIT) and 
+        last_distance < DISTANCE_THRESHOLD
+    ):    
         print("Exiting detected -> TURN OFF")
         turn_off()
         light_on = False
@@ -73,6 +78,9 @@ while True:
         turn_on()
         light_on = True
         continue
+
+    if not light_on and (now - exit_time <= EXIT_COOLDOWN):
+        print("Entry logic blocked during exit cooldown")
 
     # --- STAYING IN ROOM: mmWave consistently sees > 100 cm ---
     # only if bulb is already on; do NOT use this to turn ON light
