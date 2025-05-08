@@ -27,7 +27,7 @@ def read_lux():
         print(f"BH1750 read error: {e}")
         return None
 
-def calculate_brightness(lux, min_lux=13.0, max_lux=50.0, min_brightness=50.0):
+def calculate_brightness(lux, min_lux=10.0, max_lux=15.0, min_brightness=15.0):
     # map raw lux to brightness (30 - 254)
     # map:
     # >= 50 -> 0 (OFF)
