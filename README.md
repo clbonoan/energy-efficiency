@@ -37,4 +37,4 @@ Install dependencies:
 pip install paho-mqtt
 sudo apt-get install nodejs
 npm install -g pnpm
-pip install smbus2
+pip install smbus
