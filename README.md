@@ -29,7 +29,7 @@ This is a project done in my Computer Networks class. The goal is to reduce ener
   - `paho-mqtt`
   - `time`, `datetime`,
   - `json`
-  - `smbus2`
+  - `smbus`
  
 Install dependencies:
 
